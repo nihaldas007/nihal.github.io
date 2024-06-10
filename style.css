@@ -1224,7 +1224,7 @@ span{
         /* display: grid; */
         grid-template-columns: repeat(1,1fr);
         /* align-items: center; */
-        /* gap: 2.5rem; */
+        gap: 2.5rem;
     }
     /* .services-container{
         width: 70%;  
@@ -1233,13 +1233,18 @@ span{
     .service-box{
         height: 400px;
         width: 300px;
-        margin-left: 15px;
+        margin-left: 10px;
         align-items: center; 
+    }
+    .projects{
+        height: 3100px;
+        /* width: 300px; */
     }
     .box1{
         grid-template-columns: repeat(1,1fr);
-        margin: -55px;
+        margin: -60px;
         align-items: center;
+        gap: 0.1rem;
     }
     .contact form .input-box input,
     .contact form textarea{
