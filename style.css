@@ -1233,12 +1233,12 @@ span{
     .service-box{
         height: 400px;
         width: 300px;
-        margin-left: 20px;
+        margin-left: 15px;
         align-items: center; 
     }
     .box1{
         grid-template-columns: repeat(1,1fr);
-        margin: -50px;
+        margin: -55px;
         align-items: center;
     }
     .contact form .input-box input,
