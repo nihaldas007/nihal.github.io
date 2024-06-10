@@ -21,6 +21,7 @@
 html{
     font-size: 60%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body{
     background-color: var(--bg-color1);
@@ -164,9 +165,9 @@ span{
     box-shadow: 0 0 25px var(--main-color);
     background-color: var(--main-color);
 }
-.btn{
+.btn0{
     display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 2rem 3.8rem;
     background: var(--main-color);
     box-shadow: 0 0 25px var(--main-color);
     border-radius: 4rem;
@@ -181,26 +182,73 @@ span{
     animation: slideTop 1s ease forwards;
     animation-delay: .7s;
 }
-.btn:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 50px var(--main-color);
-}
 .btn-group{
     display: flex;
+    height: 10vh;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    gap: 1.5rem;
 }
-.btn_group a:nth-of-type(2){
-    background-color: black;
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
-    box-shadow: 0 0 25px transparent;
+.btn{
+    position: relative;
+    padding: 18px 38px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    transition: all 0.6s ease;
+    letter-spacing: 3px;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+
 }
-.btn_group a:nth-of-type(2):hover{  
-    box-shadow: 0 0 25px var(--main-color);
-    background-color: var(--main-color);
-    color: black;
+.btn-1{
+    border: 2px solid #4D4DFF;
+    border-radius: 30px;
+    overflow: hidden;
 }
+.btn-1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #4D4DFF;  
+    z-index: -2; 
+}
+.btn-1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    left: 0;
+    bottom: -150%;
+    border-radius: 30%;
+    background-color: #000000;
+    z-index: -1;
+}
+.btn-1:hover::before{
+   animation: btn-1 2s linear both;
+
+} 
+@keyframes btn-1{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        bottom: 100px;
+        transform: rotate(360deg);
+    }
+}
+
+/* .btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--main-color);
+}  */
+
 .text-animation{
    font-size: 34px;
    font-weight: 600;
@@ -390,7 +438,7 @@ span{
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color);
     position: absolute;
-    left: calc(50% - 8px);
+    left: calc(50% - 9px);
     border-radius: 50%;
     top: 10px;
 }
@@ -625,7 +673,7 @@ span{
     align-items: center;
     justify-content: center;
     background-color: var(--main-color);
-    height: 500px;
+    height: 430px;
     border-radius: 2rem;
     border: 5px solid transparent;
     cursor:pointer;
@@ -644,7 +692,7 @@ span{
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 5rem 5rem;
+    padding: 3rem 2srem;
 }
 .service-info h4{
     font-size: 4rem;
@@ -663,7 +711,109 @@ span{
     background-color: var(--bg-color);
     background-size: cover;
 }
-.projects-box{
+.box1{
+    display: grid;
+    margin: -65px;
+    margin-top: 10px;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 1rem;
+}
+.card {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 260px 170px ;
+    grid-template-areas: "image" "text";
+
+    width: 300px;
+    border-radius: 18px;
+    background: rgb(0, 0, 0);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+    
+    transition: 0.5s ease;
+    cursor: pointer;
+    margin:30px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+  .card-image {
+    grid-area: image;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, #000000 100%),url("projects1.png");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+  }
+  
+  .card-text {
+    grid-area: text;
+    margin: 25px;
+    transform: translateZ(30px);
+  }
+  .card-text .date {
+    color: rgb(255, 7, 110);
+    font-size:13px;
+    transform: translateZ(30px);
+  }
+  .card-text p {
+    color: grey;
+    font-size:15px;
+    font-weight: 300;
+    transform: translateZ(30px);
+  }
+  .card-text h2 {
+    margin-top:0px;
+    font-size:28px;
+    transform: translateZ(30px);
+  }
+  .card:hover {
+    transform: scale(1.1);
+    /* box-shadow: 15px 15px 15px var(--main-color); */
+    box-shadow: 0 0 25px var(--main-color),
+    0 0 50px var(--main-color);  
+  }  
+  /*card2*/
+  .card-image.card2 {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, #000000 100%),url("projects2.png");
+    background-size: cover;
+    
+  }
+  .card-text.card2 .date {
+    color: rgb(11, 7, 255);
+  }
+  /*card3*/
+.card-image.card3 {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, #000000 100%),url("projects3.png");
+    background-size: cover;
+}
+.card-text.card3 .date {
+    color: rgb(0, 189, 63);
+}
+  .card-image.card4 {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, #000000 100%),url("projects4.png");
+    background-size: cover;
+    
+  }
+  .card-text.card4 .date {
+    color: rgb(255, 77, 7);
+  }
+  /*card3*/
+  .card-image.card5 {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, #000000 100%),url("projects5.png");
+    background-size: cover;
+  }
+  .card-text.card5 .date {
+    color: rgb(255, 77, 7);
+  }
+  .card-image.card6 {
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, #000000 100%),url("projects6.png");
+    background-size: cover;
+  }
+  .card-text.card6 .date {
+    color: rgb(0, 189, 63);
+  }
+/* .projects-box{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     place-items: center;
@@ -672,7 +822,23 @@ span{
     row-gap: 5rem;
 }
 .projects-card{
-    height: 600px;
+    display: grid;
+    grid-template-columns: 260px;
+    grid-template-rows: 260px 110px;
+    grid-template-areas: "image" "text";
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px var(--main-color);
+    border-radius: 5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    margin: 30px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}  */
+/* .projects-card{
+    height: 350px;
     max-height: 450px;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(30px);
@@ -689,22 +855,86 @@ span{
     cursor: pointer;
     box-shadow: 0 0 5px var(--main-color);
     transition: 0.4s ease;
-}
-.projects-card:hover{
+    transform-style: preserve-3d; */
+    /* perspective: 1000px; */
+ /* } */
+/* .projects-card:hover{
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color);
     transform: scale(1.02);
 }
 .projects-card img{
     max-width: 18vw;
+    position: relative;
+    margin-top: 55px;
     object-fit: cover;
+    border-radius: 30px;
 }
 .projects-card h3{
+    position: relative;
+    margin-top: 1px;
    font-size: 3rem; 
+   transform: translateZ(30px);
 }
 .projects-card p{
+    position: relative;
+    bottom: 40px;
     font-size: 1.6rem; 
- }
+    transform: translateZ(30px);
+ } */
+/* .projects{
+    background-color: var(--bg-color);
+    background-size: cover;
+}
+.projects-box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    margin: 5rem 0;
+    gap: 2rem;
+    row-gap: 3rem;
+}
+.projects-card{
+    padding-top: 100px;
+    height: 350px;
+    max-height: 450px;
+    background-position: center center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(30px);
+    border: 2px solid var(--main-color);
+    border-radius: 20px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 6rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--main-color);
+    transition: all 0.5s ease-in-out;
+    
+}
+.projects-card:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
+}
+.projects-card img{
+    max-width: 18vw;
+    object-fit: cover;
+
+}
+.projects-card .h3{
+   position: relative;
+   bottom: 30px;
+}
+.projects-card p{
+    position: relative;
+    bottom: 20px;
+    font-size: 1.6rem; 
+ } */
  .contact{
     background-color: var(--second-bg-color);
  }
@@ -758,7 +988,7 @@ span{
     border: 2px solid var(--main-color);
     width: 42px;
     height: 42px;
-    line-height: 42px;
+    line-height: 47px;
     display: inline-block;
     text-align: center;
     border-radius: 50%;
@@ -803,13 +1033,13 @@ span{
     html{
         font-size: 50%;
     }
-    /* .projects-box{
-        grid-template-columns: repeat(2,1fr);
-
-    } */
-    .projects-box img{
-       min-width: 20vw; 
-    }   
+    /* .card{
+        grid-template-rows: 270px 170px ;
+        grid-template-areas: "image" "text";
+        
+        width: 300px;
+        margin-left: 80px;
+    }  */
 }
 @media(max-width:1024px){
     header{
@@ -832,6 +1062,17 @@ span{
         font-size: 2.5rem;
         /* font-weight: 700; */
     }
+    .box1{
+        grid-template-columns: repeat(2,1fr);
+        gap: 0.7rem;  
+    }
+        .card{
+        grid-template-rows: 270px 170px ;
+        grid-template-areas: "image" "text";
+        
+        width: 300px;
+        margin-left: 80px;
+    } 
 }
 @media(max-width:991px){
     html,
@@ -866,7 +1107,7 @@ span{
 
     }
     .timeline-dot{
-        left: 0;
+        left: -1px;
     }
     .skill-main{
         grid-template-columns: 1fr;
@@ -943,7 +1184,7 @@ span{
 
 
 }
-@media(max-width: 425px){
+@media(max-width: 463px){
     header{
         padding: 1rem 2%; 
         width:95%;
@@ -980,16 +1221,26 @@ span{
     .service h2{
         margin-bottom: 2rem;
     }
+    .services-container{
+        /* display: grid; */
+        grid-template-columns: repeat(1,1fr);
+        /* align-items: center; */
+        /* gap: 2.5rem; */
+    }
     /* .services-container{
         width: 70%;  
         align-items: center;    
     } */
-    .projects-box{
-        grid-template-columns: repeat(1,1fr); 
+    .service-box{
+        height: 400px;
+        width: 300px;
+        margin-left: 50px;
+        align-items: center; 
     }
-    .projects-box img{
-        min-width: 36rem;
-
+    .box1{
+        grid-template-columns: repeat(1,1fr);
+        margin: -20px;
+        align-items: center;
     }
     .contact form .input-box input,
     .contact form textarea{
