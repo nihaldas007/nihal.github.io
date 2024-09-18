@@ -765,8 +765,8 @@ span{
   }
   .card-text p {
     color: grey;
-    font-size:10px;
-    font-weight: 250;
+    font-size:13px;
+    font-weight: 280;
     transform: translateZ(30px);
   }
   .card-text h2 {
