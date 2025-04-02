@@ -1161,11 +1161,6 @@ span{
     .home-content{
         margin-top: 45rem;
     }
-    .robot-3d{
-        scale:0.8;
-        top:-10%;
-        right: -3%;
-    }
     
     section{
         padding: 1rem 3%;
@@ -1246,11 +1241,6 @@ span{
         max-width: 600px;
         margin: 0 auto;
     }
-    .robot-3d{
-/*         scale:0.5;
-        top:-10%;
-        right: -1%; */
-    }
     
     .service h2{
         margin-bottom: 3rem;
@@ -1299,7 +1289,7 @@ span{
     }
     .robot-3d{
         /* position: relative; */
-/*         scale:0.5; */
+        scale:0.5;
         top:-16%;
         /* right: 0%; */
         /* overflow-x: hidden; */
