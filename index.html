@@ -11,31 +11,31 @@
         <script src="https://unpkg.com/scrollreveal"></script>
     </head>
     <body>
+        <img class="image-gradiant" src="gradient.png" alt="gradient">
+        <div class="layer-blur"></div>
         <header class="header">
-            <a href="#home" class="logo">Nihal Das
-                <span>Ankur</span></a>
-
+            <h2 class="logo">NIHAL DAS ANKUR</h2>
                 <i class='bx bx-menu' id="menu-icon"></i>
-
-
                 <nav class="navbar">
-                  <a href="#home" style="--i:1" class="active">Home</a>
-                  <a href="#education" style="--i:2">Education</a>
-                  <a href="#skills" style="--i:3">Skillls</a>
-                  <a href="#services" style="--i:4">Services</a>
-                  <a href="#projects" style="--i:5">Projects</a>
-                  <a href="#contact" style="--i:6">Contact</a>
+                  <a href="#home" style="--i:1" class="active">HOME</a>
+                  <a href="#education" style="--i:2">QUALIFICATION</a>
+                  <a href="#skills" style="--i:3">SKILLS</a>
+                  <a href="#services" style="--i:4">SERVICES</a>
+                  <a href="#projects" style="--i:5">PROJECTS</a>
+                  <a href="#contact" style="--i:6">CONTACT</a>
                 </nav>
 
         </header>
+        
         <section class="home" id="home">
             <div class="home-content">
-                <h1>Hi, It's <span>Nihal</span></h1>
+                <div class="tag-box">
+                    <div class="tag">INTRODUCING &wedbar;</div>
+                </div>
+                <h1>Hi,It's <span>Nihal</span></h1>
                 <h3 class="text-animation">I'm a <span></span></h3>  
-                <p>I am an Embedded System Engineer. Me and my team makes some real-life projects.
-                   Personally, i make differents projects to enhance my creative knowladge.I am here 
-                   to help your next project.
-
+                <p>AI based robot is the best way to 
+                    convert your <br>imagination in reality.
                 </p>       
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/nihal-das-921004219/" target="_blank" style="--i:7"><i class='bx bxl-linkedin'></i></a>
@@ -49,13 +49,15 @@
                     <!-- <a href="#contact" class="btn">Contact</a> -->
                 </div>
             </div>
-                <div class="home-img">
-                    <img src="image.jpg" a1t="">
-                </div>
+                <!-- <div  class="robot-3d">
+                    <spline-viewer url="https://prod.spline.design/JD-zqnh-jY7nQANN/scene.splinecode"></spline-viewer>
+                </div> -->
+             <spline-viewer class="robot-3d" url="https://prod.spline.design/JD-zqnh-jY7nQANN/scene.splinecode"></spline-viewer>
+
         </section>
 
         <section class="education" id="education">
-            <h2 class="heading">Education</h2>
+            <h2 class="heading">Qualification</h2>
             <div class="timeline-items">
 
 
@@ -96,6 +98,18 @@
                         </div>
                     
                  </div>
+                 <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">
+                            <h3>University</h3>
+                            <p>
+                                Electrical and Electronics Engineering Running<br>
+                                Southeast University<br>
+                                Tejgaon Industrial Area, Dhaka
+                            </p>
+                        </div>
+                </div>
                  <div class="timeline-item">
                     <div class="timeline-dot"></div>
                         <div class="timeline-date">2024</div>
@@ -369,5 +383,6 @@
              });
              ScrollReveal().reveal('.heading',{delay : 100, origin: 'left'});
         </script>
+         <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.80/build/spline-viewer.js"></script>
     </body>
 </html>
