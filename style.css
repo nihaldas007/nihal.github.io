@@ -1306,9 +1306,9 @@ span{
         font-size: -2%;
     }
     .robot-3d{
-        scale:0.7;
+        scale:0.4;
         top:-16%;
-        left: -23%;
+        right: -40%;
     }
     
     .service h2{
