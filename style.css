@@ -109,6 +109,9 @@ section{
     background-size: 200%;
     animation: animationGradient 2.5s linear infinite;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
 }
 @keyframes animationGradient{
     to{
@@ -128,6 +131,9 @@ section{
     justify-content: center;
     transition: 0.5s ease;
     cursor: pointer;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
 }
 .tag-box .tag:hover{
     color: #5300a0;
@@ -205,11 +211,11 @@ span{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 5rem;
+    height: 5rem;
     background: transparent;
     border: 2px solid var(--main-color);
-    font-size: 3.5rem;
+    font-size: 3rem;
     border-radius: 50%;
     color: var(--main-color);
     margin: 2.5rem 2rem 2.5rem 0;
