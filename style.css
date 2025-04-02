@@ -1298,6 +1298,7 @@ span{
         font-size: -2%;
     }
     .robot-3d{
+        position: relative;
         scale:0.5;
         top:-16%;
         right: 0%;
