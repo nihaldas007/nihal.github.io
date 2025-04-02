@@ -1247,7 +1247,7 @@ span{
         margin: 0 auto;
     }
     .robot-3d{
-        scale:0.4;
+        scale:0.8;
         top:-10%;
         right: -1%;
     }
@@ -1299,7 +1299,7 @@ span{
     }
     .robot-3d{
         /* position: relative; */
-        scale:0.7;
+        scale:0.6;
         top:-16%;
         right: 0%;
         /* overflow-x: hidden; */
