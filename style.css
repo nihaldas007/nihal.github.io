@@ -97,7 +97,7 @@ header{
 }
 section{
     min-height: calc(110vh - 25rem);
-    padding: 13rem 8% 5rem;  
+    padding: 13rem 8% 1rem;  
 }
 .tag-box{
     position: relative;
@@ -109,6 +109,9 @@ section{
     background-size: 200%;
     animation: animationGradient 2.5s linear infinite;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    animation: slideRight 2s ease forwards;
+    animation-delay: .7s;
 }
 @keyframes animationGradient{
     to{
@@ -128,6 +131,9 @@ section{
     justify-content: center;
     transition: 0.5s ease;
     cursor: pointer;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
 }
 .tag-box .tag:hover{
     color: #5300a0;
@@ -173,7 +179,6 @@ span{
 }
 .home-img{
     border-radius: 50%;
-    /* background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, #000000 100%),url("image.jpg"); */
 }
 .home-img img{
     position: relative;
@@ -188,11 +193,7 @@ span{
                 0 0 50px var(--main-color),
                 0 0 100px var(--main-color),
 }
-.robot-3d{
-    position: absolute;
-    top: 1rem;
-    right: -20%;
-}
+
 .home-content p{
     font-size: 1.8rem;
     font-weight: 300;
@@ -205,11 +206,11 @@ span{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 5.0rem;
+    height: 5.0rem;
     background: transparent;
     border: 2px solid var(--main-color);
-    font-size: 3.5rem;
+    font-size: 3.0rem;
     border-radius: 50%;
     color: var(--main-color);
     margin: 2.5rem 2rem 2.5rem 0;
@@ -223,7 +224,7 @@ span{
     transform: scale(1.2)translateY(-10px);
     background-color: var(--main-color);
     color: black;
-    box-shadow: 0 0 25px var(--main-color);
+    /* box-shadow: 0 0 25px var(--main-color); */
 
  }
 /* .social-icons a:hover{
@@ -301,7 +302,12 @@ span{
    animation: btn-1 2s linear both;
 
 } 
-
+.robot-3d{
+    position: absolute;
+    top: 1rem;
+    right: -25%;
+    /* width: 205vh; */
+}
 @keyframes btn-1{
     0%{
         transform: rotate(0deg);
@@ -462,7 +468,7 @@ span{
     margin: 5rem 0;
 }
 .education{
-    padding: 100px 15px;
+    padding: 50px 0px;
     background: var(--second-bg-color);
 }
 .education h2{
@@ -552,6 +558,7 @@ span{
     width: 50;
 }
 .skills{
+    margin-top: -10%;
     background: var(--bg-color);
 
 }
@@ -567,7 +574,8 @@ span{
    margin-bottom: 2.3rem; 
 }
 .skill-main h3{
-    margin-bottom: 2rem;
+    /* margin-top: 15%; */
+    margin-bottom: 10rem;
     font-size: 3rem;
     text-align: center;
 }
@@ -723,6 +731,7 @@ span{
 }
 
 .services{
+    margin-top: -6%;
     background-color: var(--second-bg-color);
     color: black;
 }
@@ -776,6 +785,7 @@ span{
     font-size: 8rem;
 }
 .projects{
+    margin-top: -8%;
     background-color: var(--bg-color);
     background-size: cover;
 }
@@ -1004,6 +1014,7 @@ span{
     font-size: 1.6rem; 
  } */
  .contact{
+    margin-top: -6%;
     background-color: var(--second-bg-color);
  }
  .contact h2{
@@ -1101,6 +1112,7 @@ span{
     html{
         font-size: 50%;
     }
+    
     /* .card{
         grid-template-rows: 270px 170px ;
         grid-template-areas: "image" "text";
@@ -1158,7 +1170,9 @@ span{
     .robot-3d{
         scale:0.8;
         top:-10%;
-        right: -3%;
+        /* right: -80%; */
+        /* left: 10%; */
+        width: 165vh;
     }
     
     section{
@@ -1294,7 +1308,7 @@ span{
     .robot-3d{
         scale:0.7;
         top:-16%;
-        right: 0%;
+        left: -23%;
     }
     
     .service h2{
