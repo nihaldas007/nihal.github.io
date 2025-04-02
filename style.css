@@ -305,8 +305,8 @@ span{
 .robot-3d{
     position: absolute;
     top: 1rem;
-    right: -20%;
-    width: 205vh;
+    right: -28%;
+    /* width: 205vh; */
 }
 @keyframes btn-1{
     0%{
