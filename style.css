@@ -1289,8 +1289,9 @@ span{
     }
     .robot-3d{
         scale: 0.6;
-        top:-18%;
-        right: 0%;
+        top:-22%;
+        right: -33%;
+        width: 150vh;
     }
     
     .service h2{
